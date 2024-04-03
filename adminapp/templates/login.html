@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    {% include 'head.html' %}
+
+</head>
+
+<body>
+
+
+    <div class="ch-container">
+        ,<center><div>
+            <img src="{% static 'img/logo2.png' %}" style="width: 180px; height: 130px; " >
+        </div></center>
+        <div class="row" style="color: black;">
+            
+        <div class="row">
+            <div class="col-md-12 center login-header">
+                <h2 style="margin-top: -8px;">Welcome to Smart City Parking</h2>
+            </div>
+            <!--/span-->
+        </div><!--/row-->
+    
+        <div class="row" style="margin-top: -10px;">
+            <div class="well col-md-5 center login-box" style=" background-color: #e7e9e7  ">
+                <div class="alert alert-info" style="background-color: #575352; color: white; border: #575352;">
+                    Please login with your Username and Password.
+                </div>
+                <form class="form-horizontal"  method="post">
+                    {% csrf_token %}
+                    <fieldset>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user red" style="color:black;"></i></span>
+                            <input type="text" name="username" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="clearfix"></div><br>
+    
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock red" style="color:black;"></i></span>
+                            <input type="password" name="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="clearfix"></div>
+    
+                        
+                        <div class="clearfix"></div>
+    
+                        <p class="center col-md-5">
+                            <button type="submit" class="btn btn-primary" style="background-color: #575352; color: white; border: #575352;">Login</button>
+                        </p>
+                  
+                        {% if msg != "" %}
+                        <div class="alert alert-info" style="background-color: #575352; color: white; border: #575352;">
+                            {{msg}}
+                        </div>
+                        {% endif %}
+                    </fieldset>
+                </form>
+            </div>
+            <!--/span-->
+        </div><!--/row-->
+    </div><!--/fluid-row-->
+    
+    </div><!--/.fluid-container-->
+    
+    <!-- external javascript -->
+{% include 'script.html' %}
+</body>
+</html>

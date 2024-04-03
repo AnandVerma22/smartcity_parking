@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    {% include 'head.html' %}
+
+</head>
+
+<body>
+    <!-- topbar starts -->
+    <div class="navbar navbar-default" role="navigation">
+    
+		{% include 'header.html' %}
+		
+    </div>
+    <!-- topbar ends -->
+<div class="ch-container">
+    <div class="row">
+        
+        <!-- left menu starts -->
+        
+        {% include 'leftbar.html' %}
+        <!-- left menu ends -->
+
+        
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Dashboard</a>
+        </li>
+    </ul>
+</div>
+
+<!-- start-->
+
+<div class=" row">
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{typecount.0.0}} New Type." class="well top-block" href="/adminapp/Type">
+            <i class="glyphicon glyphicon-list-alt blue"></i>
+
+            <div>Total Type</div>
+            <div>{{typecount.0.0}}</div>
+            <span class="notification blue">{{typecount.0.0}}</span>
+        </a>
+    </div>
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{slotcount.0.0}} New Slots" class="well top-block" href="/adminapp/Slot">
+            <i class="glyphicon glyphicon-th blue"></i>
+
+            <div>Total Slots</div>
+            <div>{{slotcount.0.0}}</div>
+            <span class="notification blue">{{slotcount.0.0}}</span>
+        </a>
+    </div>
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{usercount.0.0}} Users" class="well top-block" href="/adminapp/User">
+            <i class="glyphicon glyphicon-user yellow"></i>
+
+            <div>Total User</div>
+            <div>{{usercount.0.0}}</div>
+            <span class="notification yellow">{{usercount.0.0}}</span>
+        </a>
+    </div>
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{bookingcount.0.0}} New Booking"class="well top-block" href="/adminapp/Booking">
+            <i class=" glyphicon glyphicon-plus-sign blue"></i>
+
+            <div>Total Booking</div>
+            <div>{{bookingcount.0.0}}</div>
+            <span class="notification blue">{{bookingcount.0.0}}</span>
+        </a>
+    </div>
+
+
+
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{pendingstatuscount.0.0}} Panding Booking "class="well top-block" href="/adminapp/Booking">
+            <i class="glyphicon glyphicon-bookmark red"></i>
+
+            <div>Total Pending - Booking</div>
+            <div>{{pendingstatuscount.0.0}}</div>
+            <span class="notification red">{{pendingstatuscount.0.0}}</span>
+        </a>
+    </div>
+
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{confirmstatuscount.0.0}} Confirm Booking "class="well top-block" href="/adminapp/Booking">
+            <i class="glyphicon glyphicon-bookmark yellow"></i>
+
+            <div>Total Confirm - Booking</div>
+            <div>{{confirmstatuscount.0.0}}</div>
+            <span class="notification yellow">{{confirmstatuscount.0.0}}</span>
+        </a>
+    </div>
+
+
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{completestatuscount.0.0}} Complete Booking "class="well top-block" href="/adminapp/Booking">
+            <i class="glyphicon glyphicon-bookmark green"></i>
+
+            <div>Total Complete - Booking</div>
+            <div>{{completestatuscount.0.0}}</div>
+            <span class="notification green">{{completestatuscount.0.0}}</span>
+        </a>
+    </div>
+    
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{showfeedbackcount.0.0}} Show Feedback"class="well top-block" href="/adminapp/feedback">
+            <i class="glyphicon glyphicon-comment green"></i>
+
+            <div>Total Show - Feedback</div>
+            <div>{{showfeedbackcount.0.0}}</div>
+            <span class="notification green">{{showfeedbackcount.0.0}}</span>
+        </a>
+    </div>
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="{{hidefeedbackcount.0.0}} Hide Feedback"class="well top-block" href="/adminapp/feedback">
+            <i class="glyphicon glyphicon-comment red"></i>
+
+            <div>Total Hide - Feedback</div>
+            <div>{{hidefeedbackcount.0.0}}</div>
+            <span class="notification red">{{hidefeedbackcount.0.0}}</span>
+        </a>
+    </div>
+
+</div>
+
+<!--End -->
+
+
+
+
+
+
+    <!-- content ends -->
+    </div><!--/#content.col-md-0-->
+</div><!--/fluid-row-->
+
+    
+
+    <hr>
+
+  
+
+    <footer class="row">
+		{% include 'footer.html' %}
+    </footer>
+
+</div><!--/.fluid-container-->
+
+<!-- external javascript -->
+
+{% include 'script.html' %}
+</body>
+</html>
